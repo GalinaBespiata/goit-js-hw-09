@@ -47,7 +47,7 @@ btnStart.addEventListener('click', onBtnStart);
 
 const timer = {
   timerId: null,
-start() {
+  start() {
     this.timerId = setInterval(() => {
       const deltaTime = choosenDate.getTime() - Date.now();
 
@@ -55,7 +55,7 @@ start() {
         this.stop();
         return;
       }
-      
+
       const { days, hours, minutes, seconds } = this.convertMs(deltaTime);
       //  console.log(days)
       day.textContent = this.pad(days);
